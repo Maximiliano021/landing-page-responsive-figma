@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(90deg, #9796F0 0%, #FBC7D4 100%);
+    min-height: 100vh;
+}
+
+.contenedor{
+    position: relative;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    outline:solid 2px red;
+}
+
+.waves{    
+    position: absolute;
+    right:0;
+    width: 60%;
+    top: 0px;
+}
+
+.contenedor-textos{
+    /* determina el tamaño , del flex item, del eje principal */
+    flex-basis:50%;
+    padding-left: 40px;
+    overflow:hidden;
+    color:white;
+}
+
+.title-contenedor{
+    font-size:50px;
+}
+
+.subtitle-contenedor{
+    font-size:30px;
+    font-weight: 500;
+    margin:20px 0;
+}
+
+.cta{
+    display:inline-block;
+    width:180px;
+    /* margin-top:20px; */
+    padding:18px 0;
+    text-align: center;
+    background:#fff;
+    text-decoration: none;
+    border-radius: 4px;
+    color:#9796F0;
+    font-weight: 600;
+}
+
+.contenedor-imagen{
+    flex-basis: 50%;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    overflow:hidden;
+}
+
+.ilustracion{
+    width:95%;
+    animation:animate ease-in 1s infinite alternate;
+}
+
+
+@keyframes animate{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}
+
+
+@media screen and (max-width:800px){
+    .contenedor{
+        flex-direction: column-reverse;
+    }
+
+    .waves{
+        width:80%;
+    }
+    .contenedor-textos{
+        display:flex;
+        flex-direction: column;
+        padding-left: 0;
+        justify-content: content;
+        align-items: center;
+        /* define el tamaño del elemento en el ejerce principal */
+        flex-basis: 40%;
+        text-align:center
+    }
+    .title-contenedor{
+        font-size: 40px;
+    }
+    .subtitle-contenedor{
+        font-size:20px;
+    }
+    .contenedor-imagen{
+        flex-basis: 60%;
+        width:100%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ilustracion{
+        height:90%;
+    }
+}
+
+
+@media screen and (max-width:500px){
+    .waves{
+        width:auto;
+        height:48%;
+    }
+    .contenedor-textos{
+        flex-basis: 40%;
+        justify-content: flex-start;
+    }
+    .title-contenedor{
+        font-size:35px;
+    }
+}
