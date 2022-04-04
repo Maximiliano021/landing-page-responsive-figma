@@ -1,4 +1,4 @@
-<img  src='./ilustraciones/ilustracion.svg' height='50px'>
+<img  src='./ilustraciones/ilustracion.svg' height='80px'>
 
 # Landing Page Minimalista diseñada con Figma
 url Figma: https://www.figma.com/file/w9h3eWxB2DtZTOGSVEI5pa/Landing-Page?node-id=4%3A45
